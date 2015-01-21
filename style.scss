@@ -1,0 +1,292 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'Aleo-Bold';
+	src: url('aleo-font/Aleo-Regular.otf') format('truetype');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Aleo-Bold';
+	src: url('aleo-font/Aleo-Light.otf') format('truetype');
+	font-weight: 300;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background: #1a5a66 url('beach.jpg') no-repeat fixed center center;
+	background-size: cover;
+	min-height: 100vh;
+}
+
+body {
+	font-family: Aleo-Bold, serif;
+	-webkit-text-size-adjust: none;
+	-moz-font-feature-settings:"lnum" 1, "kern" 1, "liga" 1, "dlig" 1, "clig" 1;
+	-moz-font-feature-settings:"lnum=1, kern=1, liga=1, dlig=1, clig=1";
+	-ms-font-feature-settings:"lnum" 1, "kern" 1, "liga" 1, "dlig" 1, "clig" 1;
+	-o-font-feature-settings:"lnum" 1, "kern" 1, "liga" 1, "dlig" 1, "clig" 1;
+	-webkit-font-feature-settings:"lnum" 1, "kern" 1, "liga" 1, "dlig" 1, "clig" 1;
+	font-feature-settings:"lnum" 1, "kern" 1, "liga" 1, "dlig" 1, "clig" 1;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+h1 {
+	text-align: center;
+	font-size: 32px;
+	letter-spacing: 0.02em;
+	text-shadow: 0 2px 0 rgba(blue, 0.3);
+	margin-bottom: 50px;
+	a {
+		color: white;
+		text-decoration: none;
+		&:hover,
+		&:focus {
+			outline: none;
+			text-shadow: 0 0 3px black;
+		}
+	}
+}
+
+form {
+	position: relative;
+	width: auto;
+	max-width: 840px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 30px;
+	padding-right: 30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	label {
+		position: absolute;
+		left: -999em;
+	}
+	input, {
+		margin: 0;
+		font-family: Aleo-Bold, serif;
+		font-size: 20px;
+		border-radius: 7px;
+		padding: 5px 7px 6px;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		&[type="text"] {
+			display: block;
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box;
+			background-color: rgba(255,255,255,0.5);
+			border: solid 1px #999;
+			margin-bottom: 15px;
+			padding-right: 34px;
+			&:focus {
+				outline: none;
+			}
+		}
+		&[type="submit"] {
+			display: none;
+			background-color: rgba(0,0,0,0.63);
+			color: white;
+			border: solid 1px #999;
+			font-weight: 300;
+			&:focus {
+				outline: none;
+			}
+			&:hover {
+				outline: none;
+				background-color: rgba(0,0,0,0.75);
+			}
+			&:active {
+				background-color: rgba(0,0,0,0.63);
+				box-shadow: inset 0 0 6px 4px rgba(0,0,0,0.8);
+			}
+		}
+	}
+}
+
+@media all and (min-width: 640px) {
+
+	h1 {
+		font-size: 48px;
+		margin-top: 80px;
+		margin-bottom: 70px;
+	}
+
+	form {
+		padding-left: 50px;
+		padding-right: 50px;
+		input {
+			display: inline-block !important;
+			padding: 7px 10px 8px;
+			&[type="text"] {
+				width: 80%;
+				border-right: none;
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+				padding-right: 42px;
+			}
+			&[type="submit"] {
+				width: 20%;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}
+	}
+
+}
+
+@media all and (min-width: 760px) {
+
+	h1 {
+		font-size: 64px;
+		margin-top: 110px;
+		margin-bottom: 90px;
+	}
+
+	form {
+		input {
+			font-size: 26px;
+			padding: 11px 14px 11px;
+			&[type="text"] {
+				padding-right: 58px;
+			}
+		}
+	}
+
+}
+
+@-webkit-keyframes redfade {
+	from { background-color: rgba(255,0,0,0.27); }
+	to   { background-color: rgba(255,255,255,0.5); }
+}
+
+@-moz-keyframes redfade {
+	from { background-color: rgba(255,0,0,0.27); }
+	to   { background-color: rgba(255,255,255,0.5); }
+}
+
+@-ms-keyframes redfade {
+	from { background-color: rgba(255,0,0,0.27); }
+	to   { background-color: rgba(255,255,255,0.5); }
+}
+
+@-o-keyframes redfade {
+	from { background-color: rgba(255,0,0,0.27); }
+	to   { background-color: rgba(255,255,255,0.5); }
+}
+
+@keyframes redfade {
+	from { background-color: rgba(255,0,0,0.27); }
+	to   { background-color: rgba(255,255,255,0.5); }
+}
+
+form input[type="text"].retry {
+	background-color: rgba(255,0,0,0.27);
+	-webkit-animation: redfade 1.8s 0.7s 1 forwards ease-out;
+	-moz-animation: redfade 1.8s 0.7s 1 forwards ease-out;
+	-ms-animation: redfade 1.8s 0.7s 1 forwards ease-out;
+	-o-animation: redfade 1.8s 0.7s 1 forwards ease-out;
+	animation: redfade 1.8s 0.7s 1 forwards ease-out;
+}
+
+.success {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: block;
+	text-align: center;
+	a {
+		display: inline-block;
+		font-size: 20px;
+		background-color: rgba(255,255,255,0.8);
+		margin: 20px 0 0;
+		color: black;
+		text-decoration: none;
+		padding: 14px 20px 15px;
+		border-radius: 7px;
+		-webkit-user-select: text;
+		-moz-user-select: text;
+		-ms-user-select: text;
+		-o-user-select: text;
+		user-select: text;
+		-ms-word-break: break-all;
+		//noinspection CssOverwrittenProperties
+		word-break: break-all; // breaks words mid-word
+		//noinspection CssOverwrittenProperties,CssInvalidPropertyValue
+		word-break: break-word; // non-standard for Webkit
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		hyphens: auto;
+		&:hover,
+		&:focus {
+			outline: none;
+			background-color: rgba(220,220,220,0.8);
+		}
+	}
+}
+
+#clear-button {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-right: 30px;
+	opacity: 0.4;
+	cursor: pointer;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	background: url('clear.svg') no-repeat center center;
+	background-size: contain;
+	width: 37px;
+	height: 37px;
+	&:hover {
+		opacity: 0.7;
+	}
+	&.visible {
+		display: inline;
+	}
+}
+
+@media all and (min-width: 640px) {
+
+	#clear-button {
+		right: 20%;
+		width: 44px;
+		height: 42px;
+	}
+
+}
+
+@media all and (min-width: 760px) {
+
+	#clear-button {
+		width: 60px;
+		height: 57px;
+	}
+
+}
+
+::-webkit-input-placeholder { // WebKit
+	color: rgba(0,0,0,0.4);
+}
+:-moz-placeholder { // Firefox 18-
+	color: rgba(0,0,0,0.4);
+}
+::-moz-placeholder {  // Firefox 19+
+	color: rgba(0,0,0,0.4);
+}
+:-ms-input-placeholder { // Internet Explorer
+	color: rgba(0,0,0,0.4);
+}
