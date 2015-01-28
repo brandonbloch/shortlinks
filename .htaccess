@@ -1,0 +1,9 @@
+DirectoryIndex index.php
+
+Redirect 301 /shortlinks http://o.bloch.ca
+
+ErrorDocument 404 /error.php
+ErrorDocument 403 /error.php
+
+RewriteEngine On
+RewriteRule ^([a-zA-Z0-9]+)/?$ ?u=$1 [QSA]
